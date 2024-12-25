@@ -243,3 +243,39 @@ header nav a:hover {
 .footer a:hover {
     text-shadow: 0 0 5px #ff9500;
 }
+
+/* Стили для мобильных устройств (включая iPhone X) */
+@media only screen and (max-width: 375px) {
+    header {
+        padding: 15px; /* Меньше отступов */
+    }
+
+    header .logo {
+        width: auto;
+        margin-right: 0;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column; /* Вертикальное выравнивание для мобильных */
+        gap: 10px;
+        align-items: center;
+    }
+
+    header nav a {
+        font-size: 1rem; /* Меньший шрифт */
+        padding: 10px 15px; /* Больше пространства для кнопок */
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav a:hover {
+        background: rgba(255, 255, 255, 0.1); /* Легкий эффект при наведении */
+    }
+
+    /* Можно добавить для уменьшения логотипа, если он слишком большой */
+    header .logo img {
+        width: 80%; /* Логотип будет занимать 80% доступной ширины */
+    }
+}
+

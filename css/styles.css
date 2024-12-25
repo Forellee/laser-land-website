@@ -7,8 +7,7 @@ body {
 }
 
 header {
-    background: url('C:/Users/admin/Documents/Laserland/img/new_year.png') no-repeat center center/cover,
-    linear-gradient(90deg, #9b0000, #380000);
+    background: url('../img/new_year.png') no-repeat center center/cover;
     color: rgb(255, 255, 255);
     padding: 20px;
     position: sticky;
@@ -37,7 +36,7 @@ header .logo {
     display: flex;
     align-items: center;
     flex: 0 0 auto;
-    width: 150px;
+    width: 160px;
 }
 
 header .logo img {
@@ -84,7 +83,7 @@ header nav a:hover {
 
 .hero {
     text-align: center;
-    background: url('C:/Users/admin/Documents/Laserland/img/laserland_main.png') no-repeat center center/cover;
+    background: url('../img/laserland_main.png') no-repeat center center/cover;
     color: white;
     padding: 150px 20px;
     position: relative;
@@ -132,7 +131,7 @@ header nav a:hover {
     padding: 15px 30px;
     font-size: 1rem;
     color: #121212;
-    background: #ffeb3b;
+    background: #f34e02;
     border: none;
     border-radius: 25px;
     cursor: pointer;
@@ -148,7 +147,6 @@ header nav a:hover {
 }
 
 .services {
-    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -156,41 +154,78 @@ header nav a:hover {
 }
 
 .services .service {
-    background: url('C:/Users/admin/Documents/Laserland/img/new_year.png') no-repeat center center/cover, 
-    linear-gradient(135deg, #ff6400, #ff9500);
+    position: relative;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
     padding: 20px;
     text-align: center;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
-    transform: translateY(0);
-    transition: transform 0.3s;
-    animation: servicePop 1s ease-out;
 }
 
-@keyframes servicePop {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
+.service-laser {
+    background: url('../img/new-year-lasertag.png') no-repeat center center/cover;
+}
 
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+.service-bowling {
+    background: url('../img/new-year-bowling.png') no-repeat center center/cover;
+}
+
+.service-cafe {
+    background: url('../img/new-year-cafe.png') no-repeat center center/cover;
+}
+
+.services .service {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    animation: fadeIn 1s ease-out;  /* Добавлена анимация при загрузке */
+    transition: transform 0.3s ease-in-out; /* Добавление плавного эффекта для hover */
 }
 
 .services .service:hover {
-    transform: translateY(-10px);
+    transform: scale(0.9); /* Увеличение при наведении */
 }
 
-.services .service img {
-    height: 150px;
-    margin-bottom: 15px;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);  /* Начальная позиция снизу */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);  /* Конечная позиция */
+    }
 }
 
-.services .service h3 {
-    margin: 0 0 10px;
+
+.services .service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.services .service h3,
+.services .service p {
+    position: relative;
+    z-index: 2;
 }
 
 .footer {

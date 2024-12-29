@@ -4,6 +4,7 @@ body {
     color: #333;
     background: #121212;
     overflow-x: hidden;
+    background: url('../img/polygon_background.png') no-repeat center center/cover;
 }
 
 header {
@@ -81,7 +82,7 @@ header nav a:hover {
     transform: scale(1.1);
 }
 
-.hero {
+.main {
     text-align: center;
     background: url('../img/laserland_main.png') no-repeat center center/cover;
     color: white;
@@ -89,7 +90,7 @@ header nav a:hover {
     position: relative;
 }
 
-.hero::before {
+.main::before {
     content: '';
     position: absolute;
     top: 0;
@@ -100,7 +101,7 @@ header nav a:hover {
     z-index: 1;
 }
 
-.hero h1 {
+.main h1 {
     font-size: 3.5rem;
     margin: 0 0 20px;
     position: relative;
@@ -112,7 +113,7 @@ header nav a:hover {
 
     0%,
     100% {
-        text-shadow: 0 0 5px #fa0000, 0 0 10px #ffffff, 0 0 20px #0026ff;
+        text-shadow: 0 0 5px #00c8fa, 0 0 10px #ffffff, 0 0 20px #0026ff;
     }
 
     50% {
@@ -120,14 +121,14 @@ header nav a:hover {
     }
 }
 
-.hero p {
+.main p {
     font-size: 1.2rem;
     margin: 0 0 30px;
     position: relative;
     z-index: 2;
 }
 
-.hero .cta {
+.main .cta {
     padding: 15px 30px;
     font-size: 1rem;
     color: #d1d1d1;
@@ -141,7 +142,7 @@ header nav a:hover {
     z-index: 2;
 }
 
-.hero .cta:hover {
+.main .cta:hover {
     background: #8d8a7d;
     transform: scale(1.1);
 }
@@ -336,8 +337,8 @@ header nav a:hover {
 
 .new_year-tree {
     background-color: #ffffff;
-    padding: 150px 20px;
-    text-align: center;
+    padding: 10px 20px;
+    text-align: left;
     position: relative;
     display: flex;
     justify-content: center;
@@ -350,30 +351,43 @@ header nav a:hover {
     color: #ff7b00;
     text-align: center;
     margin-top: 0%;
+    margin-left: 10%;
+    margin-right: 50%;
     padding-top: 0%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+ 
+}
+
+.text_intro p {
+    margin-left: 10%;
+    margin-right: 50%;
 }
 
 .tree_image img {
     width: auto;
-    height: 500px;
-    position: relative;
-    display: flex;
+    height: 400px;    
 }
 
 .new_year-price {
-    margin-top: 10%;
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+
+}
+
+.new_year-price p {
+    margin-left: 50%;
 }
 
 .footer {
     background: #121212;
-    color: white;
+    color: rgb(168, 168, 168);
     padding: 20px;
     text-align: center;
+    font-size: 12px;
 }
 
 .footer a {

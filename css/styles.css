@@ -151,6 +151,7 @@ header nav a:hover {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 40px 20px;
+
 }
 
 .services .service {
@@ -169,14 +170,17 @@ header nav a:hover {
 
 .service-laser {
     background: url('../img/new-year-lasertag.png') no-repeat center center/cover;
+
 }
 
 .service-bowling {
     background: url('../img/new-year-bowling.png') no-repeat center center/cover;
+    background-position: left 0px bottom -150px;
 }
 
 .service-cafe {
     background: url('../img/new-year-cafe.jpeg') no-repeat center center/cover;
+    background-position: left 0px bottom -50px;
 }
 
 .services .service {
@@ -226,6 +230,14 @@ header nav a:hover {
 .services .service p {
     position: relative;
     z-index: 2;
+}
+
+.new_year-offers{
+    text-align: center;
+    background: url('../img/xmas_tree.png') no-repeat center center/cover;
+    color: white;
+    padding: 150px 20px;
+    position: relative;
 }
 
 .footer {

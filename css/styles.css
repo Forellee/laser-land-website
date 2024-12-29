@@ -130,7 +130,7 @@ header nav a:hover {
 .hero .cta {
     padding: 15px 30px;
     font-size: 1rem;
-    color: #121212;
+    color: #d1d1d1;
     background: #f34e02;
     border: none;
     border-radius: 25px;
@@ -232,12 +232,141 @@ header nav a:hover {
     z-index: 2;
 }
 
-.new_year-offers{
+.new_year-offers {
     text-align: center;
     background: url('../img/xmas_tree.png') no-repeat center center/cover;
     color: white;
     padding: 150px 20px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Белый контейнер для текста */
+.new_year-offers .text-box {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    text-align: center;
+}
+
+
+.new_year-offers .text-box h1 {
+    color: #d83200;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.new_year-offers .text-box p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.gallery {
+    overflow: hidden; /* Скрываем прокрутку за пределами контейнера */
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.scroll-container {
+    display: flex; /* Выстраиваем фото в ряд */
+    gap: 20px; /* Промежуток между фото */
+    overflow: hidden; /* Убираем горизонтальный скролл */
+    position: relative;
+    padding: 10px;
+}
+
+.photo {
+    flex: 0 0 auto; /* Элементы не сжимаются и не растягиваются */
+    width: 300px; /* Фиксированная ширина фото */
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Скруглённые углы */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+.photo img:hover {
+    transform: scale(1.05); /* Лёгкое увеличение */
+    transition: transform 0.3s ease; /* Плавность эффекта */
+}
+
+/* Модальное окно */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.modal .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.new_year-tree {
+    background-color: #ffffff;
+    padding: 150px 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.text_intro h1 {
+    color: #ff7b00;
+    text-align: center;
+    margin-top: 0%;
+    padding-top: 0%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.tree_image img {
+    width: auto;
+    height: 500px;
+    position: relative;
+    display: flex;
+}
+
+.new_year-price {
+    margin-top: 10%;
 }
 
 .footer {
